@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Postpartum - Midwifery Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Professional postpartum midwifery care in Tri-Cities, Pitt Meadows, and Maple Ridge. MSP covered home visits.">
+</head>
+<body>
+    <!-- Header with logo and language selector -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="#" class="logo" data-translate="home_postpartum">Home Postpartum</a>
+                <div class="language-selector">
+                    <label for="language" data-translate="language">Language:</label>
+                    <select id="language" onchange="changeLanguage(this.value)">
+                        <option value="en">English</option>
+                        <option value="zh-cn">中文 (简体)</option>
+                        <option value="zh-hk">中文 (繁體)</option>
+                        <option value="pt">Português</option>
+                        <option value="es">Español</option>
+                        <option value="ko">한국어</option>
+                        <option value="pa">ਪੰਜਾਬੀ</option>
+                        <option value="fa">فارسی</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation menu -->
+    <nav>
+        <div class="container">
+            <div class="nav-links">
+                <a href="#home" data-translate="nav_home">Home</a>
+                <a href="#services" data-translate="nav_services">Services</a>
+                <a href="#areas" data-translate="nav_areas">Service Areas</a>
+                <a href="#intake" data-translate="nav_intake">Intake Form</a>
+                <a href="#contact" data-translate="nav_contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero section - main banner -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 data-translate="hero_title">Professional Postpartum Care at Home</h1>
+            <p data-translate="hero_subtitle">Comprehensive midwifery and lactation support for new families in the Tri-Cities area as well as Pitt Meadows and Maple Ridge. MSP covered services with home visits for your comfort and convenience.</p>
+            <a href="#intake" class="cta-button" data-translate="hero_cta">Start Your Care Journey</a>
+        </div>
+    </section>
+
+    <!-- Services section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 data-translate="services_title">Our Services</h2>
+            <div class="services-grid">
+                <!-- Postpartum Care Card -->
+                <div class="service-card">
+                    <h3 data-translate="service1_title">Full Postpartum Care</h3>
+                    <ul>
+                        <li data-translate="service1_item1">6 weeks of postpartum care covered by MSP</li>
+                        <li data-translate="service1_item2">No healthcare provider referral needed - self referral accepted</li>
+                        <li data-translate="service1_item3">Self refer during pregnancy or up to 13 days after birth</li>
+                        <li data-translate="service1_item4">All visits are home visits throughout the 6 weeks</li>
+                        <li data-translate="service1_item5">Comprehensive postpartum health monitoring</li>
+                        <li data-translate="service1_item6">Newborn care and feeding support</li>
+                    </ul>
+                </div>
+                
+                <!-- Lactation Consulting Card -->
+                <div class="service-card">
+                    <h3 data-translate="service2_title">IBCLC Lactation Consulting</h3>
+                    <ul>
+                        <li data-translate="service2_item1">MSP covered up to 6 weeks (healthcare provider referral required)</li>
+                        <li data-translate="service2_item2">Service available beyond 6 weeks postpartum (private pay)</li>
+                        <li data-translate="service2_item3">Self referral accepted for private pay services</li>
+                        <li data-translate="service2_item4">Breastfeeding support and education</li>
+                        <li data-translate="service2_item5">Latch assessment and improvement</li>
+                        <li data-translate="service2_item6">Pumping and milk supply guidance</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service areas section -->
+    <section id="areas" class="service-areas">
+        <div class="container">
+            <h2 data-translate="areas_title">Service Areas</h2>
+            <div class="areas-list">
+                <div class="area-badge">Port Coquitlam</div>
+                <div class="area-badge">Coquitlam</div>
+                <div class="area-badge">Port Moody</div>
+                <div class="area-badge">Pitt Meadows</div>
+                <div class="area-badge">Maple Ridge</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intake form section -->
+    <section id="intake" class="form-section">
+        <div class="container">
+            <h2 data-translate="intake_title">Client Intake Form</h2>
+            <p class="form-intro" data-translate="intake_intro">Please fill out this form to begin your postpartum care journey. All information is confidential and will be sent securely to our team.</p>
+            
+            <!-- Main intake form -->
+            <form class="intake-form" id="intakeForm" action="process-form.php" method="POST">
+                <!-- Personal Information -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="firstName" data-translate="form_first_name">First Name <span class="required">*</span></label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div>
+                            <label for="lastName" data-translate="form_last_name">Last Name <span class="required">*</span></label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="phn" data-translate="form_phn">Personal Health Number <span class="required">*</span></label>
+                            <input type="text" id="phn" name="phn" required>
+                        </div>
+                        <div>
+                            <label for="dob" data-translate="form_dob">Date of Birth <span class="required">*</span></label>
+                            <input type="date" id="dob" name="dob" required>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="phone" data-translate="form_phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div>
+                            <label for="email" data-translate="form_email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="address" data-translate="form_address">Full Address <span class="required">*</span></label>
+                    <textarea id="address" name="address" required></textarea>
+                </div>
+
+                <!-- Pregnancy/Delivery Information -->
+                <div class="form-group">
+                    <div class="form-row">
+                        <div>
+                            <label for="dueDate" data-translate="form_due_date">Due Date (if pregnant)</label>
+                            <input type="date" id="dueDate" name="dueDate">
+                        </div>
+                        <div>
+                            <label for="deliveryDate" data-translate="form_delivery_date">Delivery Date (if delivered)</label>
+                            <input type="date" id="deliveryDate" name="deliveryDate">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medical Information -->
+                <div class="form-group">
+                    <label for="deliveryInfo" data-translate="form_delivery_info">Delivery Information (if applicable)</label>
+                    <textarea id="deliveryInfo" name="deliveryInfo" placeholder="Hospital, birth type, complications, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="pregnancyComplications" data-translate="form_pregnancy_complications">Pregnancy Complications</label>
+                    <textarea id="pregnancyComplications" name="pregnancyComplications"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="healthComplications" data-translate="form_health_complications">Health Complications or Medical History</label>
+                    <textarea id="healthComplications" name="healthComplications"></textarea>
+                </div>
+
+                <!-- Care-specific Information -->
+                <div class="form-group">
+                    <label for="concerns" data-translate="form_concerns">Current Concerns or Challenges</label>
+                    <textarea id="concerns" name="concerns"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedingHopes" data-translate="form_feeding_hopes">Hopes for Feeding Baby</label>
+                    <textarea id="feedingHopes" name="feedingHopes" placeholder="Breastfeeding goals, formula feeding, combination feeding, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="questions" data-translate="form_questions">Questions for the Midwife/Lactation Consultant</label>
+                    <textarea id="questions" name="questions"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="emergencyContact" data-translate="form_emergency_contact">Emergency Contact Name and Phone</label>
+                    <input type="text" id="emergencyContact" name="emergencyContact">
+                </div>
+
+                <!-- Consent -->
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" data-translate="form_consent">I consent to sharing this information with Home Postpartum for the purpose of providing care. <span class="required">*</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn" data-translate="form_submit">Submit Intake Form</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 data-translate="contact_title">Contact Information</h2>
+            <div class="contact-info">
+                <h3>Krista Hamblin RM, IBCLC</h3>
+                <p><strong data-translate="contact_email">Email:</strong> info@homepp.ca</p>
+                <p><strong data-translate="contact_fax">Fax:</strong> 1-778-763-5338</p>
+                <p style="margin-top: 1rem; font-style: italic;" data-translate="contact_note">Serving families in the Tri-Cities area as well as Pitt Meadows and Maple Ridge with compassionate, professional postpartum care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p data-translate="footer_text">&copy; 2024 Home Postpartum. All rights reserved. Professional midwifery care for your family.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
